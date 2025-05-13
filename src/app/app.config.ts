@@ -19,6 +19,6 @@ export const appConfig: ApplicationConfig = {
       provideStorage(() => getStorage()),
       provideMessaging(() => getMessaging())
     ),
-    provideRouter(routes)
+    provideRouter(routes), provideFirebaseApp(() => initializeApp({"projectId":"friendlychat-kelven","appId":"1:462191980426:web:5df1c3d777438fa64aa273","storageBucket":"friendlychat-kelven.firebasestorage.app","apiKey":"AIzaSyAlc3ebgKmN9M0eQruyGn9rglzZ9J4XrYA","authDomain":"friendlychat-kelven.firebaseapp.com","messagingSenderId":"462191980426","measurementId":"G-Z923SJY06H"})), provideAuth(() => getAuth()), provideFirestore(() => getFirestore()), provideMessaging(() => getMessaging()), provideStorage(() => getStorage())
   ],
 };
