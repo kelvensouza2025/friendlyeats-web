@@ -3,22 +3,16 @@
     "rules": "firestore.rules",
     "indexes": "firestore.indexes.json"
   },
-  "hosting": [
-    {
-      "source": ".",
-      "frameworksBackend": {
-        "region": "us-central1",
-        "runtime": "nodejs20",
-        "maxInstances": 10
-      },
-      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
+  "hosting": {
+    "source": ".",
+    "frameworksBackend": {
+      "region": "us-central1",
+      "runtime": "nodejs20",
+      "memory": "512Mi",
+      "maxInstances": 10
     },
-    {
-      "target": "friendlychat",
-      "source": ".",
-      "frameworksBackend": {}
-    }
-  ],
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
+  },
   "storage": {
     "rules": "storage.rules"
   },
