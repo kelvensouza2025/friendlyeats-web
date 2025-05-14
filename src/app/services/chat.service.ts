@@ -83,6 +83,7 @@ export class ChatService {
   login() {
     signInWithPopup(this.auth, this.provider).then((result) => {
       const credential = GoogleAuthProvider.credentialFromResult(result);
+      this.requestNotificationsPermissions(); // Solicita permissão após login
       this.router.navigate(['/', 'chat']);
       return credential;
     });
