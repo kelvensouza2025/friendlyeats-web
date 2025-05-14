@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { HeaderComponent } from './components/header/header.component';
 import { RouterModule } from '@angular/router';
+import { ChatService } from './services/chat.service';
 
 @Component({
   selector: 'app-root',
@@ -10,5 +11,9 @@ import { RouterModule } from '@angular/router';
   imports: [HeaderComponent, RouterModule],
 })
 export class AppComponent {
-  title = 'friendlychat';
+  constructor(private chatService: ChatService) {}
+
+  requestNotifications() {
+    this.chatService.requestNotificationsPermissions();
+  }
 }
