@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "copy-firebase-sw": "cp src/firebase-messaging-sw.js dist/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
